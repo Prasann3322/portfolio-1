@@ -22,6 +22,7 @@
 
     /* ===== Navbar ===== */
     nav {
+  
       display: flex;
       justify-content: center;
       gap: 50px;
@@ -40,8 +41,12 @@
       color: white;
       text-decoration: none;
       font-size: 1.3rem;
-      letter-spacing:1.5px;
+      /* letter-spacing:1.5px; */
       transition: color 0.3s ease;
+      font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
     }
 
     nav a:hover {
@@ -58,14 +63,19 @@
       padding-left:10%;
       padding-right:0%;
       height:100vh;
+      overflow-X:hidden;
     }
-
+    .hero-img-phone{
+      display:none;
+      z-index:1;
+    }
     .hero-text {
       max-width: 50%;
+      z-index:10;
     }
 
     .hero-text h1 {
-      font-size: 6.5rem;
+      font-size: 11vh;
       font-weight: 600;
       color: #d0a933;
       font-family: "Baskervville", serif;
@@ -73,6 +83,7 @@
   font-weight: <weight>;
   font-style: normal;
   z-index:2;
+  z-index:10;
     }
 
     .hero-text h2 {
@@ -87,12 +98,14 @@
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+    z-index:10;
 
     }
     .name{
         color: #d0a933;
         font-size:1.8rem;
         font-weight:600;
+        z-index:10;
     }
 
     .hero-text p {
@@ -105,6 +118,7 @@
   font-weight: 400;
   font-style: normal;
   width:500px;
+  z-index:10;
 
 
     }
@@ -129,6 +143,8 @@
     .hero-img img {
       
       animation: galow 3s infinite alternate;
+      scale:1.3;
+      z-index:1;
     }
 
     @keyframes glow {
@@ -276,7 +292,7 @@ a{
 }
 
 .about-desc {
-  font-size: 1.1rem;
+  font-size: 1.1vw;
   margin-bottom: 20px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
@@ -311,31 +327,16 @@ a{
   flex: 1;
   text-align: center;
     border-radius: 50%;
+    
 }
 
 .about-img img {
-
+height:auto;
+    width:30vw;
+    
   animation: glow 3s infinite alternate;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-img img {
-    max-width: 200px;
-    margin-top: 30px;
-  }
-  .hero{
-    padding-right:10%;
-
-  }
-  .hero img{
-    display:none;
-  }
-}
 
 
 /* the contact section */
@@ -391,25 +392,278 @@ a{
 
 
 
-/* Mobile view: switch to 1 column */
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
-    /* Try  */
-    /* ===== Responsive ===== */
-    @media (max-width: 900px) {
+
+    /* ===== Responsive for Tablet ===== */
+    @media (min-width:550px) and (max-width: 900px){
       .hero {
-        flex-direction: column;
-        text-align: center;
+        flex-direction:;
+        text-align:;
+        justify-content:;
+        overflow-X:hidden;
+        align-items:center;
+        margin-top:0vh;
       }
       .hero-text {
         max-width: 100%;
-        margin-bottom: 30px;
+        
       }
+
+      .hero-text h1 {
+      font-size: 10vw;
+      width:50vw;
+      }
+      .hero-img{
+        width:40vw;
+      }
+     .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img img {
+    max-width: 200px;
+    margin-top: 30px;
+  } 
+  .hero{
+    padding-right:10%;
+
+  }
+  .hero-text p {
+    width:100%;
+    font-size:
+  }
+  
+  
+  .btn{
+    margin-top:5vh;
+  }
+
+  .project-grid {
+    gap:30px;
+  }
+
+
+  
+    .project-line{
+      width: 40vw;
+      margin-bottom: 60px;
+    }
+
+.project-grid {
+  gap: 40px 5vw;
+}
+
+/* Card */
+.project-card {
+  
+ 
+  width:40vw;
+}
+
+
+.project-tags span {
+
+  font-size: 1.8vw;
+ 
+}
+.project-title {
+  font-size: 3vw;
+  
+}
+
+
+
+.about-section {
+
+  height:95vh;
+}
+
+
+
+.about-text {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2.8rem;
+
+  margin-bottom: 20px;
+
+}
+
+.about-desc {
+  font-size: 2vw;
+  margin-bottom: 20px;
+
+}
+
+
+.about-btn {
+  scale:0.8;
+
+}
+.button{
+  display:flex;
+  gap:30px;
+    justify-content:center;
+}
+
+
+
+.about-img {
+
+  overflow:hidden;
+  flex: 1;
+  text-align: center;
+    border-radius: 50%;
+    margin-top:-1vh;
+}
+
+.about-img img {
+height:auto;
+    width:30vw;
+    margin-bottom:0;
+    
+  animation: glow 2s infinite alternate;
+}
+
+
+
+
+
+
+
     } 
+/* -----Mobile Responsiveness------- */
+          /* Mobile */
+@media(max-width:550px) {
+
+   
+.hero {
+      align-items: center;
+      text-align:center;
+      justify-content: space-between;
+      padding-left:10%;
+      padding-right:10%;
+      height:auto;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    .hero-text h1 {
+      margin-top:5vh;
+      font-size: 7vh;
+    }
+
+    .hero-text p {
+      width:100%;
+    }
+
+    .btn {
+      margin-bottom:10vh;
+    }
+
+    .hero-img{
+      display:none;
+    }
+
+    .project-heading{
+       font-size: 3.5rem;
+       margin-top:2.5vh;
+    }
+    .project-line{
+      width: 50vw;
+      margin-bottom: 7vh;
+    }
+    .project-section {
+    align-items:center;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  border-radius: 3%;
+  padding: 20px 20px;
+  box-shadow: inset 3px 3px 30px #d0a93368, inset -3px -3px 30px #d0a93359;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;  /* always 2 columns on desktop/tablet */
+  gap: 5vh;
+}
+
+/* Card */
+.project-card {
+  width:80vw;
+}
+
+.about-section {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-content:center;
+  text-align:center;
+  padding-top:27vh;
+}
+.about-container {
+  displayL:flex;
+    flex-direction: column;
+    text-align: center;
+  }
+.about-img img {
+    max-width: 200px;
+    margin-top: 30px;
+  }
+
+.about-section {
+
+  height:75vh;
+}
 
 
+
+.about-text {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2.8rem;
+
+  margin-bottom: 20px;
+
+}
+
+.about-desc {
+  font-size: 3vw;
+  margin-bottom: 20px;
+
+}
+
+.button{
+  display:flex;
+  justify-content:center;
+}
+
+
+
+
+
+.about-img {
+
+  overflow:hidden;
+  flex: 1;
+  text-align: center;
+    border-radius: 50%;
+    margin-top:-1vh;
+}
+
+.about-img img {
+height:auto;
+    width:30vw;
+    margin-bottom:0;
+    
+  animation: glow 2s infinite alternate;
+}
+}
